@@ -2,21 +2,16 @@ from rest_framework import generics
 from rest_framework import viewsets
 from rest_framework import permissions
 from django.shortcuts import render
-from .models import Booking, MenuItem
-from .serializers import MenuItemSerializer, BookingSerializer
+from .models import Booking, Menu
+from .serializers import MenuSerializer, BookingSerializer
 
 
 def home(request):
     return render(request, 'index.html')
 
-class MenuItemsView(generics.ListCreateAPIView):
-    queryset = MenuItem.objects.all()
-    serializer_class = MenuItemSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
-    queryset = MenuItem.objects.all()
-    serializer_class = MenuItemSerializer
+class MenuViewSet(viewsets.ModelViewSet):
+    queryset = Menu.objects.all()
+    serializer_class = MenuSerializer
     permission_classes = [permissions.IsAuthenticated]
 
 class BookingViewSet(viewsets.ModelViewSet):
