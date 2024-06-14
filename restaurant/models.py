@@ -11,11 +11,10 @@ class Booking(models.Model):
         return str(self.name)
 
 
-# Add code to create Menu model
-class Menu(models.Model):
-    title = models.CharField(max_length=255) 
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    inventory = models.IntegerField(default=0)
-
-    def __str__(self):
-        return str(self.title)
+class MenuItem(models.Model):
+    title = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    inventory = models.SmallIntegerField()
+    
+    def get_item(self):
+        return f'{self.title} : {str(self.price)}'
