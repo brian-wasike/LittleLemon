@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'accounts',
     'rest_framework',
+    'djoser'
 ]
 
 MIDDLEWARE = [
@@ -158,3 +159,5 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',),
 }
+
+DJOSER={"USER_ID_FIELD":"username"}
