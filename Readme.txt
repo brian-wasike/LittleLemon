@@ -1,5 +1,6 @@
 Github url https://github.com/brian-wasike/LittleLemon
 
+/
 /api/menu-items/
 /api/booking/
 
