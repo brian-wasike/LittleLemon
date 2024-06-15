@@ -5,4 +5,4 @@
 /auth/users/me/
 /auth/token/login
 
-/api/api/api-token-auth/
+/api/api-token-auth/
