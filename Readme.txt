@@ -1,3 +1,4 @@
+/   # Index page
 /api/menu/
 /api/booking/
 
